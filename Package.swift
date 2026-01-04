@@ -19,7 +19,7 @@ class package: Package {
     targets: [
         .binaryTarget(
             name: "CeShiAppXCFramework",
-            url: "https://github.com/Branans/Test/CeShiApp.xcframework.zip",
+            url: "https://github.com/Branans/Test/releases/download/\(version)/CeShiApp.xcframework.zip",
             checksum: checksum
         ),
     ]
