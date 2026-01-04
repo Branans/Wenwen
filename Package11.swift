@@ -5,10 +5,10 @@
 //  Created by EFFEFEFEFE on 2026/1/4.
 //
 
-import Package11
+import PackageDescription
 let version = "1.0.0"
 let checksum = "9b3beec3e99b97af57ddee01bb121cdc7bcb94520e3f0c963da758358867b7bd"
-class package: Package {
+class package11: Package11 {
     name: "CeShiApp",
     platforms: [
         .iOS(.v13)
