@@ -50,7 +50,7 @@ let package = Package(
         // Swift: import CeShiApp
         // Objective-C: #import <CeShiApp/CeShiApp.h>
         .library(
-            name: "CeShiApp",
+            name: "CeShiAppXCFramework",
             targets: ["CeShiAppXCFramework"]
         ),
     ],
