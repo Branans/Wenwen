@@ -15,51 +15,28 @@
 // 这是 SPM 的标准模块，不需要手动添加，Xcode 会自动提供
 // ============================================================================
 
+// swift-tools-version: 5.7
 import PackageDescription
 
-// ============================================================================
-// CeShiApp Framework 配置
-// ============================================================================
-// 从 GitHub Releases 下载并集成 CeShiApp.framework
-// SPM 会在编译时自动下载、验证、解压和链接 Framework
-
-// Framework 版本号
-let frameworkVersion = "1.0.1"
-
-// Framework 的 SHA256 校验和（用于验证文件完整性）
-let frameworkChecksum = "cffa5ceaafd3f6d2630144efd3d29d750d3034cd9cfc04be7bec80d6106f78f1"
-
-// GitHub 仓库信息（请修改为实际的仓库地址）
-let githubUsername = "Branans"
-let githubRepoName = "Test"
-
-// Framework 下载 URL（GitHub Releases 格式）
-let frameworkDownloadURL = "https://github.com/\(githubUsername)/\(githubRepoName)/releases/download/\(frameworkVersion)/CeShiApp.framework.zip"
-
-// ============================================================================
-// Package 配置
-// ============================================================================
+let version = "1.0.1"
+let checksum = "cffa5ceaafd3f6d2630144efd3d29d750d3034cd9cfc04be7bec80d6106f78f1"
 
 let package = Package(
-    name: "Wenwen",
+    name: "Wenwen",  // 包名
     platforms: [
         .iOS(.v13)
     ],
     products: [
-        // 导出的库，支持 Swift 和 Objective-C 调用
-        // Swift: import CeShiApp
-        // Objective-C: #import <CeShiApp/CeShiApp.h>
         .library(
             name: "CeShiAppXCFramework",
-            targets: ["CeShiAppXCFramework"]
+            targets: ["CeShiAppXCFramework"]  // 必须匹配
         ),
     ],
     targets: [
-        // 二进制 Framework 目标
         .binaryTarget(
-            name: "CeShiAppXCFramework",
-            url: frameworkDownloadURL,
-            checksum: frameworkChecksum
+            name: "CeShiAppXCFramework",  // 必须匹配
+            url: "https://github.com/Branans/Test/releases/download/\(version)/CeShiApp.framework.zip",
+            checksum: checksum
         ),
     ]
 )
