@@ -41,7 +41,7 @@ let frameworkDownloadURL = "https://github.com/\(githubUsername)/\(githubRepoNam
 // ============================================================================
 
 let package = Package(
-    name: "Disan",
+    name: "Wenwen",
     platforms: [
         .iOS(.v13)
     ],
