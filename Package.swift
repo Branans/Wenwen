@@ -51,13 +51,13 @@ let package = Package(
         // Objective-C: #import <CeShiApp/CeShiApp.h>
         .library(
             name: "CeShiApp",
-            targets: ["CeShiAppBinary"]
+            targets: ["CeShiAppXCFramework"]
         ),
     ],
     targets: [
         // 二进制 Framework 目标
         .binaryTarget(
-            name: "CeShiAppBinary",
+            name: "CeShiAppXCFramework",
             url: frameworkDownloadURL,
             checksum: frameworkChecksum
         ),
