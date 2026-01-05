@@ -14,29 +14,19 @@
 //
 // 这是 SPM 的标准模块，不需要手动添加，Xcode 会自动提供
 // ============================================================================
-
-// swift-tools-version: 5.7
 import PackageDescription
 
-let version = "1.0.1"
-let checksum = "cffa5ceaafd3f6d2630144efd3d29d750d3034cd9cfc04be7bec80d6106f78f1"
-
 let package = Package(
-    name: "Wenwen",  // 包名
-    platforms: [
-        .iOS(.v13)
-    ],
+    name: "Wenwen",
+    platforms: [.iOS(.v13)],
     products: [
-        .library(
-            name: "CeShiAppXCFramework",
-            targets: ["CeShiAppXCFramework"]  // 必须匹配
-        ),
+        .library(name: "CeShiAppXCFramework", targets: ["CeShiAppXCFramework"]),
     ],
     targets: [
         .binaryTarget(
-            name: "CeShiAppXCFramework",  // 必须匹配
-            url: "https://github.com/Branans/Test/releases/download/\(version)/CeShiApp.framework.zip",
-            checksum: checksum
+            name: "CeShiAppXCFramework",
+            url: "https://github.com/Branans/Test/releases/download/1.0.1/CeShiApp.framework.zip",
+            checksum: "cffa5ceaafd3f6d2630144efd3d29d750d3034cd9cfc04be7bec80d6106f78f1"
         ),
     ]
 )
